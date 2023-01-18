@@ -1,0 +1,7 @@
+source "/home/hazyjz/esp/esp-idf/components/app_update/Kconfig.projbuild"
+source "/home/hazyjz/esp/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/hazyjz/esp/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/home/hazyjz/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/hazyjz/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/home/hazyjz/eclipse-workspace/AMSAE_BASE/main/Kconfig.projbuild"
+source "/home/hazyjz/eclipse-workspace/AMSAE_BASE/components/arduino/Kconfig.projbuild"

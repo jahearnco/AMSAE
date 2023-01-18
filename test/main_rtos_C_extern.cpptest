@@ -1,0 +1,65 @@
+//file: main.cpp
+#include <LoopManager.h>
+#include <soc/timer_group_struct.h>
+#include <soc/timer_group_reg.h>
+
+void feedTheDog(){
+  // feed dog 0
+  TIMERG0.wdt_wprotect=TIMG_WDT_WKEY_VALUE; // write enable
+  TIMERG0.wdt_feed=1;                       // feed dog
+  TIMERG0.wdt_wprotect=0;                   // write protect
+  // feed dog 1
+  TIMERG1.wdt_wprotect=TIMG_WDT_WKEY_VALUE; // write enable
+  TIMERG1.wdt_feed=1;                       // feed dog
+  TIMERG1.wdt_wprotect=0;                   // write protect
+}
+
+//using namespace std;
+
+struct timeval  tv1, tv2;
+unsigned long loopIters = 0L;
+unsigned long safeLoopIterMaxForWatchdogFeed = 50000L;//safe meaning LMAN_IDLING_ITERS = KMAN_IDLING_ITERS = TMAN_IDLING_ITERS = 1L
+LoopManager* lMan;
+extern "C" void app_main(void)
+{
+    initArduino();
+    pinMode(4, OUTPUT);
+    digitalWrite(4, HIGH);
+
+    setup();
+
+    while (true){
+    	loop();
+    }
+}
+
+void setup(void){
+  Serial.begin(115200);
+  delay(10);
+  lMan = lMan->getInstance();
+  gettimeofday(&tv1, NULL);
+}
+
+void loop(void){
+	loopIters++;
+	lMan->doLoopTask();
+	//yield();
+	if (loopIters == safeLoopIterMaxForWatchdogFeed){
+		gettimeofday(&tv2, NULL);
+		unsigned long lDelSec = (unsigned long)((tv2.tv_sec - tv1.tv_sec)*1000000L);
+		unsigned long lDelUs = (unsigned long)(tv2.tv_usec - tv1.tv_usec);
+		double dDelUs = (double)(lDelSec + lDelUs);
+		double usPerIter = dDelUs/(1.0*loopIters);
+
+		feedTheDog();
+
+		/*
+		printf("usPerIter fff eater = ");
+		printf("%.3f", usPerIter);
+		printf("\n");
+		*/
+
+		loopIters = 0L;
+		gettimeofday(&tv1, NULL);
+	}
+}

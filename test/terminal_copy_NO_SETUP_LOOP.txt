@@ -1,0 +1,698 @@
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5d1b: loop() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:44
+
+0x400d5d59: app_main at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:31 (discriminator 1)
+
+0x400efe08: main_task at /home/hazyjz/esp/esp-idf/components/freertos/port/port_common.c:142 (discriminator 2)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+E (66319) task_wdt: Print CPU 1 backtrace
+
+
+Backtrace :0x400P84331:0x3FFB12000x40082871:0x3FFB1220 0x4000BFED:0x3FFB7350 0x400881A6:0x3FFB7360 0x400E0028:0x3FFB7380 0x400E0033:0x3FFB73B0 0x400D2289:0x3FFB73D0 0x400868A2:0x3FFB73F0 0x40087F39:0x3FFB7410 
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400881a6: vPortExitCritical at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:473
+
+0x400e0028: esp_task_wdt_reset at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:338
+
+0x400e0033: idle_hook_cb at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:88
+
+0x400d2289: esp_vApplicationIdleHook at /home/hazyjz/esp/esp-idf/components/esp_system/freertos_hooks.c:51 (discriminator 1)
+
+0x400868a2: prvIdleTask at /home/hazyjz/esp/esp-idf/components/freertos/tasks.c:3823 (discriminator 1)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+TimingManager::ave iter = 50.78
+idlingMicros per 64 iters = 3461.824
+E (71319) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (71319) task_wdt:  - IDLE (CPU 0)
+E (71319) task_wdt: Tasks currently running:
+E (71319) task_wdt: CPU 0: main
+E (71319) task_wdt: CPU 1: IDLE
+E (71319) task_wdt: Print CPU 0 (current core) backtrace
+
+
+Backtrace:0x400DFDD3:0x3FFB0C000x40082871:0x3FFB0C20 0x400027C9:0x3FFB6260 0x400E1B25:0x3FFB6270 0x400E0D05:0x3FFB62B0 0x400DA304:0x3FFB62E0 0x400DA571:0x3FFB6390 0x400DA70C:0x3FFB63B0 0x400DA911:0x3FFB63D0 0x400D60E1:0x3FFB6470 0x400D5F56:0x3FFB6490 0x400D5F03:0x3FFB64B0 0x400D5D1B:0x3FFB64F0 0x400D5D59:0x3FFB6510 0x400EFE08:0x3FFB6530 0x40087F39:0x3FFB6550 
+0x400dfdd3: task_wdt_isr at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:191 (discriminator 3)
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400e1b25: __kernel_sin at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libm/math/k_sin.c:74
+
+0x400e0d05: sin at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libm/math/s_sin.c:111
+
+0x400da304: Brain::readOscillatorProfile(unsigned long, double, KineticProfileTickHistory*) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Brain.cpp:1010
+
+0x400da571: KineticProfileTickHistoryContainer::readSensor(unsigned long) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:12
+
+0x400da70c: KineticProfileTickHistoryContainer::updateZReading() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:128
+
+0x400da911: KineticProfileTickHistoryContainer::processSensorData(bool) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:168
+
+0x400d60e1: KineticsManager::initKineticsManagerTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticsManager.cpp:9
+
+0x400d5f56: LoopManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/LoopManager.cpp:8
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5d1b: loop() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:44
+
+0x400d5d59: app_main at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:31 (discriminator 1)
+
+0x400efe08: main_task at /home/hazyjz/esp/esp-idf/components/freertos/port/port_common.c:142 (discriminator 2)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+E (71319) task_wdt: Print CPU 1 backtrace
+
+
+packtrace:0x40084331:0x3FFB12000x40082871:0x3FFB1220 0x4000BFED:0x3FFB7350 0x400881A6:0x3FFB7360 0x400E0028:0x3FFB7380 0x400E0033:0x3FFB73B0 0x400D2289:0x3FFB73D0 0x400868A2:0x3FFB73F0 0x40087F39:0x3FFB7410 
+0x40084331: esp_crosscore_isr at /home/hazyjz/esp/esp-idf/components/esp_system/crosscore_int.c:92
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400881a6: vPortExitCritical at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:473
+
+0x400e0028: esp_task_wdt_reset at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:338
+
+0x400e0033: idle_hook_cb at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:88
+
+0x400d2289: esp_vApplicationIdleHook at /home/hazyjz/esp/esp-idf/components/esp_system/freertos_hooks.c:51 (discriminator 1)
+
+0x400868a2: prvIdleTask at /home/hazyjz/esp/esp-idf/components/freertos/tasks.c:3823 (discriminator 1)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+TimingManager::ave iter = 51.39
+ave cycling = 2803.47 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 40 & numExtremaInterrupts = 7 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3186.112
+E (76319) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (76319) task_wdt:  - IDLE (CPU 0)
+E (76319) task_wdt: Tasks currently running:
+E (76319) task_wdt: CPU 0: main
+E (76319) task_wdt: CPU 1: IDLE
+E (76319) task_wdt: Print CPU 0 (current core) backtrace
+
+
+Backtrace:0x400DFDD3:0x3FFB0C000x40082871:0x3FFB0C20 0x400D5EFC:0x3FFB63F0 0x400D6077:0x3FFB6430 0x400D5F03:0x3FFB6450 0x400D5F5C:0x3FFB6490 0x400D5F03:0x3FFB64B0 0x400D5D1B:0x3FFB64F0 0x400D5D59:0x3FFB6510 0x400EFE08:0x3FFB6530 0x40087F39:0x3FFB6550 
+0x400dfdd3: task_wdt_isr at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:191 (discriminator 3)
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400d5efc: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:35
+
+0x400d6077: KineticsManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticsManager.cpp:30
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5f5c: LoopManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/LoopManager.cpp:10
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5d1b: loop() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:44
+
+0x400d5d59: app_main at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:31 (discriminator 1)
+
+0x400efe08: main_task at /home/hazyjz/esp/esp-idf/components/freertos/port/port_common.c:142 (discriminator 2)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+E (76319) task_wdt: Print CPU 1 backtrace
+
+
+Backtrace:fx400843e31:0x3FFB12000x40082871:0x3FFB1220 0x4000BFED:0x3FFB7350 0x400881A6:0x3FFB7360 0x400E0028:0x3FFB7380 0x400E0033:0x3FFB73B0 0x400D2289:0x3FFB73D0 0x400868A2:0x3FFB73F0 0x40087F39:0x3FFB7410 
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400881a6: vPortExitCritical at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:473
+
+0x400e0028: esp_task_wdt_reset at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:338
+
+0x400e0033: idle_hook_cb at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:88
+
+0x400d2289: esp_vApplicationIdleHook at /home/hazyjz/esp/esp-idf/components/esp_system/freertos_hooks.c:51 (discriminator 1)
+
+0x400868a2: prvIdleTask at /home/hazyjz/esp/esp-idf/components/freertos/tasks.c:3823 (discriminator 1)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+TimingManager::ave iter = 51.03
+ave cycling = 2765.94 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 40 & numExtremaInterrupts = 4 & numResumeInterrupts = 0
+E (81319) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (81319) task_wdt:  - IDLE (CPU 0)
+E (81319) task_wdt: Tasks currently running:
+E (81319) task_wdt: CPU 0: main
+E (81319) task_wdt: CPU 1: IDLE
+E (81319) task_wdt: Print CPU 0 (current core) backtrace
+
+
+Backtrace:0x400DFDD3:0x3FFB0C000x40082871:0x3FFB0C20 0x400EF36C:0x3FFB61C0 0x400D73D6:0x3FFB61E0 0x400D6F56:0x3FFB6200 0x400D6B53:0x3FFB62C0 0x400D64FA:0x3FFB62E0 0x400D665E:0x3FFB6300 0x400D6669:0x3FFB6330 0x400D5F03:0x3FFB6350 0x400D6293:0x3FFB6390 0x400D629D:0x3FFB63D0 0x400D5F03:0x3FFB63F0 0x400D6077:0x3FFB6430 0x400D5F03:0x3FFB6450 0x400D5F5C:0x3FFB6490 0x400D5F03:0x3FFB64B0 0x400D5D1B:0x3FFB64F0 0x400D5D59:0x3FFB6510 0x400EFE08:0x3FFB6530 0x40087F39:0x3FFB6550 
+0x400dfdd3: task_wdt_isr at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:191 (discriminator 3)
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400ef36c: Coil::evaluateRunStatus(unsigned char, long, bool) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Coil.cpp:147
+
+0x400d73d6: Coil::runPulseSchedule(unsigned long, long) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Coil.cpp:141
+
+0x400d6f56: Pulse::getStatus(unsigned long, Coil*) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Pulse.cpp:58
+
+0x400d6b53: PulseCycle::runCycle(unsigned long) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycle.cpp:36
+
+0x400d64fa: PulseCycleManager::enableAndRunCurrentCycle() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycleManager.cpp:89
+
+0x400d665e: PulseCycleManager::processCycleQueue() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycleManager.cpp:48
+
+0x400d6669: PulseCycleManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycleManager.cpp:131
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d6293: TimingManager::updatePulseCycleManager() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/TimingManager.cpp:23
+
+0x400d629d: TimingManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/TimingManager.cpp:28
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d6077: KineticsManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticsManager.cpp:30
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5f5c: LoopManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/LoopManager.cpp:10
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5d1b: loop() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:44
+
+0x400d5d59: app_main at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:31 (discriminator 1)
+
+0x400efe08: main_task at /home/hazyjz/esp/esp-idf/components/freertos/port/port_common.c:142 (discriminator 2)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+E (81319) task_wdt: Print CPU 1 backtrace
+
+
+Backtrace:0x40084331:0x3FFB12000x40082871:0x3FFB1220 0x4000BFED:0x3FFB7350 0x400881A6:0x3FFB7360 0x400E0028:0x3FFB7380 0x400E0033:0x3FFB73B0 0x400D2289:0x3FFB73D0 0x400868A2:0x3FFB73F0 0x40087F39:0x3FFB7410 
+0x40084331: esp_crosscore_isr at /home/hazyjz/esp/esp-idf/components/esp_system/crosscore_int.c:92
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400881a6: vPortExitCritical at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:473
+
+0x400e0028: esp_task_wdt_reset at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:338
+
+0x400e0033: idle_hook_cb at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:88
+
+0x400d2289: esp_vApplicationIdleHook at /home/hazyjz/esp/esp-idf/components/esp_system/freertos_hooks.c:51 (discriminator 1)
+
+0x400868a2: prvIdleTask at /home/hazyjz/esp/esp-idf/components/freertos/tasks.c:3823 (discriminator 1)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+TimingManager::ave iter = 51.11
+idlingMicros per 64 iters = 3048.640
+ave cycling = 2761.34 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 45 & numExtremaInterrupts = 4 & numResumeInterrupts = 0
+E (86889) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (86889) task_wdt:  - IDLE (CPU 0)
+E (86889) task_wdt: Tasks currently running:
+E (86889) task_wdt: CPU 0: main
+E (86889) task_wdt: CPU 1: IDLE
+E (86889) task_wdt: Print CPU 0 (current core) backtrace
+
+
+Backtrace:0x400DFDD3:0x3FFB0C000x40082871:0x3FFB0C20 0x400637B5:0x3FFB63A0 0x400DA741:0x3FFB63B0 0x400DA911:0x3FFB63D0 0x400D60E1:0x3FFB6470 0x400D5F56:0x3FFB6490 0x400D5F03:0x3FFB64B0 0x400D5D1B:0x3FFB64F0 0x400D5D59:0x3FFB6510 0x400EFE08:0x3FFB6530 0x40087F39:0x3FFB6550 
+0x400dfdd3: task_wdt_isr at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:191 (discriminator 3)
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400da741: KineticProfileTickHistoryContainer::updateZReading() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:133
+
+0x400da911: KineticProfileTickHistoryContainer::processSensorData(bool) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:168
+
+0x400d60e1: KineticsManager::initKineticsManagerTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticsManager.cpp:9
+
+0x400d5f56: LoopManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/LoopManager.cpp:8
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5d1b: loop() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:44
+
+0x400d5d59: app_main at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:31 (discriminator 1)
+
+0x400efe08: main_task at /home/hazyjz/esp/esp-idf/components/freertos/port/port_common.c:142 (discriminator 2)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+E (86889) task_wdt: Print CPU 1 backtrace
+
+
+Backtrace:0x40084331:0x3FFB12000x40082871:0x3FFB1220 0x4000BFED:0x3FFB7350 0x400881A6:0x3FFB7360 0x400E0028:0x3FFB7380 0x400E0033:0x3FFB73B0 0x400D2289:0x3FFB73D0 0x400868A2:0x3FFB73F0 0x40087F39:0x3FFB7410 
+0x40084331: esp_crosscore_isr at /home/hazyjz/esp/esp-idf/components/esp_system/crosscore_int.c:92
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400881a6: vPortExitCritical at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:473
+
+0x400e0028: esp_task_wdt_reset at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:338
+
+0x400e0033: idle_hook_cb at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:88
+
+0x400d2289: esp_vApplicationIdleHook at /home/hazyjz/esp/esp-idf/components/esp_system/freertos_hooks.c:51 (discriminator 1)
+
+0x400868a2: prvIdleTask at /home/hazyjz/esp/esp-idf/components/freertos/tasks.c:3823 (discriminator 1)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+TimingManager::ave iter = 51.18
+ave cycling = 2760.42 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 34 & numExtremaInterrupts = 4 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3523.648
+E (91889) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (91889) task_wdt:  - IDLE (CPU 0)
+E (91889) task_wdt: Tasks currently running:
+E (91889) task_wdt: CPU 0: main
+E (91889) task_wdt: CPU 1: IDLE
+E (91889) task_wdt: Print CPU 0 (current core) backtrace
+
+
+Backtrace:0x400DFDD3:0x3FFB0C000x40082871:0x3FFB0C20 0x4000277A:0x3FFB6260 0x400E1201:0x3FFB6270 0x400E0D20:0x3FFB62B0 0x400DA304:0x3FFB62E0 0x400DA571:0x3FFB6390 0x400DA70C:0x3FFB63B0 0x400DA911:0x3FFB63D0 0x400D60E1:0x3FFB6470 0x400D5F56:0x3FFB6490 0x400D5F03:0x3FFB64B0 0x400D5D1B:0x3FFB64F0 0x400D5D59:0x3FFB6510 0x400EFE08:0x3FFB6530 0x40087F39:0x3FFB6550 
+0x400dfdd3: task_wdt_isr at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:191 (discriminator 3)
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400e1201: __kernel_cos at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libm/math/k_cos.c:81
+
+0x400e0d20: sin at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libm/math/s_sin.c:115
+
+0x400da304: Brain::readOscillatorProfile(unsigned long, double, KineticProfileTickHistory*) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Brain.cpp:1010
+
+0x400da571: KineticProfileTickHistoryContainer::readSensor(unsigned long) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:12
+
+0x400da70c: KineticProfileTickHistoryContainer::updateZReading() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:128
+
+0x400da911: KineticProfileTickHistoryContainer::processSensorData(bool) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticProfileTickHistoryContainer.cpp:168
+
+0x400d60e1: KineticsManager::initKineticsManagerTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticsManager.cpp:9
+
+0x400d5f56: LoopManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/LoopManager.cpp:8
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5d1b: loop() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:44
+
+0x400d5d59: app_main at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:31 (discriminator 1)
+
+0x400efe08: main_task at /home/hazyjz/esp/esp-idf/components/freertos/port/port_common.c:142 (discriminator 2)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+E (91889) task_wdt: Print CPU 1 backtrace
+
+
+Btacktrace:0x40084331:0x3FFB12000x40082871:0x3FFB1220 0x4000BFED:0x3FFB7350 0x400881A6:0x3FFB7360 0x400E0028:0x3FFB7380 0x400E0033:0x3FFB73B0 0x400D2289:0x3FFB73D0 0x400868A2:0x3FFB73F0 0x40087F39:0x3FFB7410 
+0x40084331: esp_crosscore_isr at /home/hazyjz/esp/esp-idf/components/esp_system/crosscore_int.c:92
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400881a6: vPortExitCritical at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:473
+
+0x400e0028: esp_task_wdt_reset at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:338
+
+0x400e0033: idle_hook_cb at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:88
+
+0x400d2289: esp_vApplicationIdleHook at /home/hazyjz/esp/esp-idf/components/esp_system/freertos_hooks.c:51 (discriminator 1)
+
+0x400868a2: prvIdleTask at /home/hazyjz/esp/esp-idf/components/freertos/tasks.c:3823 (discriminator 1)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+TimingManager::ave iter = 51.32
+ave cycling = 2747.34 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 52 & numExtremaInterrupts = 4 & numResumeInterrupts = 0
+E (96889) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (96889) task_wdt:  - IDLE (CPU 0)
+E (96889) task_wdt: Tasks currently running:
+E (96889) task_wdt: CPU 0: main
+E (96889) task_wdt: CPU 1: IDLE
+E (96889) task_wdt: Print CPU 0 (current core) backtrace
+
+
+Backtrace:0x400DFDD3:0x3FFB0C000x40082871:0x3FFB0C20 0x400D6F4A:0x3FFB6200 0x400D6B53:0x3FFB62C0 0x400D64FA:0x3FFB62E0 0x400D665E:0x3FFB6300 0x400D6669:0x3FFB6330 0x400D5F03:0x3FFB6350 0x400D6293:0x3FFB6390 0x400D629D:0x3FFB63D0 0x400D5F03:0x3FFB63F0 0x400D6077:0x3FFB6430 0x400D5F03:0x3FFB6450 0x400D5F5C:0x3FFB6490 0x400D5F03:0x3FFB64B0 0x400D5D1B:0x3FFB64F0 0x400D5D59:0x3FFB6510 0x400EFE08:0x3FFB6530 0x40087F39:0x3FFB6550 
+0x400dfdd3: task_wdt_isr at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:191 (discriminator 3)
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400d6f4a: Pulse::getStatus(unsigned long, Coil*) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Pulse.cpp:57
+
+0x400d6b53: PulseCycle::runCycle(unsigned long) at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycle.cpp:36
+
+0x400d64fa: PulseCycleManager::enableAndRunCurrentCycle() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycleManager.cpp:89
+
+0x400d665e: PulseCycleManager::processCycleQueue() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycleManager.cpp:48
+
+0x400d6669: PulseCycleManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/PulseCycleManager.cpp:131
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d6293: TimingManager::updatePulseCycleManager() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/TimingManager.cpp:23
+
+0x400d629d: TimingManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/TimingManager.cpp:28
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d6077: KineticsManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/KineticsManager.cpp:30
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5f5c: LoopManager::doWhileNotIdling() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/LoopManager.cpp:10
+
+0x400d5f03: Idler::doLoopTask() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/Idler.cpp:40
+
+0x400d5d1b: loop() at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:44
+
+0x400d5d59: app_main at /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/../main/main.cpp:31 (discriminator 1)
+
+0x400efe08: main_task at /home/hazyjz/esp/esp-idf/components/freertos/port/port_common.c:142 (discriminator 2)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+E (96889) task_wdt: Print CPU 1 backtrace
+
+
+Backtrace:0x4008433e:0x3FFB12000x40082871:0x3FFB1220 0x4000BFED:0x3FFB7350 0x400881A6:0x3FFB7360 0x400E0028:0x3FFB7380 0x400E0033:0x3FFB73B0 0x400D2289:0x3FFB73D0 0x400868A2:0x3FFB73F0 0x40087F39:0x3FFB7410 
+0x4008433e: esp_crosscore_int_send at /home/hazyjz/esp/esp-idf/components/esp_system/crosscore_int.c:117
+
+0x40082871: _xt_lowint1 at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1105
+
+0x400881a6: vPortExitCritical at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:473
+
+0x400e0028: esp_task_wdt_reset at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:338
+
+0x400e0033: idle_hook_cb at /home/hazyjz/esp/esp-idf/components/esp_system/task_wdt.c:88
+
+0x400d2289: esp_vApplicationIdleHook at /home/hazyjz/esp/esp-idf/components/esp_system/freertos_hooks.c:51 (discriminator 1)
+
+0x400868a2: prvIdleTask at /home/hazyjz/esp/esp-idf/components/freertos/tasks.c:3823 (discriminator 1)
+
+0x40087f39: vPortTaskWrapper at /home/hazyjz/esp/esp-idf/components/freertos/port/xtensa/port.c:168
+
+
+TimingManager::ave iter = 51.70
+idlingMicros per 64 iters = 3232.256
+Executing action: monitor
+Running idf_monitor in directory /home/hazyjz/eclipse-workspace/AMSAE_BASE
+Executing "/home/hazyjz/.espressif/python_env/idf4.4_py3.8_env/bin/python /home/hazyjz/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 --print_filter  /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/app-template.elf -m '/home/hazyjz/.espressif/python_env/idf4.4_py3.8_env/bin/python' '/home/hazyjz/esp/esp-idf/tools/idf.py'"...
+--- idf_monitor on /dev/ttyUSB0 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+øøxøøøxøxxxxxxxxxøxøøxxxxxøøxxxxøøxxxøøxøøxxxøøøøøøxxxøxøøxøxøxxxøøxøxxøxøxxøøøxxøxøøøøøxøøøxøxxøøxxxøxøøxøxøxxxxxøxøøxxøxøøxøxøxøøøøxxxxxøxøøøøxxøxøøøøøxøøøxøxxøøxxxøxøøxøxøxxxøxøxøxxxxxxøxxxøøxxøxøxøxxxxxxxxxxøøøøxxøxøøøøøxøøøxøxxxxøxxxxøøxxøxøxxøøxxxøxxøøøøxxøxøøøøøxøøøxøxxxets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6748
+ho 0 tail 12 room 4
+load:0x40078000,len:14236
+load:0x40080400,len:3716
+0x40080400: _init at ??:?
+
+entry 0x40080680
+I (29) boot: ESP-IDF v4.4-dev-1594-g1d7068e4b-dirty 2nd stage bootloader
+I (29) boot: compile time 09:11:51
+I (30) boot: chip revision: 1
+I (34) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (41) boot.esp32: SPI Speed      : 40MHz
+I (45) boot.esp32: SPI Mode       : DIO
+I (50) boot.esp32: SPI Flash Size : 2MB
+I (54) boot: Enabling RNG early entropy source...
+I (60) boot: Partition Table:
+I (63) boot: ## Label            Usage          Type ST Offset   Length
+I (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (86) boot:  2 factory          factory app      00 00 00010000 00100000
+I (93) boot: End of partition table
+I (97) boot_comm: chip revision: 1, min. application chip revision: 0
+I (104) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a10h ( 39440) map
+I (127) esp_image: segment 1: paddr=00019a38 vaddr=3ffb0000 size=024d8h (  9432) load
+I (131) esp_image: segment 2: paddr=0001bf18 vaddr=40080000 size=04100h ( 16640) load
+I (140) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=200fch (131324) map
+I (189) esp_image: segment 4: paddr=00040124 vaddr=40084100 size=072e4h ( 29412) load
+I (201) esp_image: segment 5: paddr=00047410 vaddr=50000000 size=00010h (    16) load
+I (207) boot: Loaded app from partition at offset 0x10000
+I (207) boot: Disabling RNG early entropy source...
+I (221) cpu_start: Pro cpu up.
+I (222) cpu_start: Starting app cpu, entry point is 0x40081058
+0x40081058: call_start_cpu1 at /home/hazyjz/esp/esp-idf/components/esp_system/port/cpu_start.c:150
+
+I (0) cpu_start: App cpu up.
+I (236) cpu_start: Pro cpu start user code
+I (236) cpu_start: cpu freq: 160000000
+I (236) cpu_start: Application information:
+I (240) cpu_start: Project name:     app-template
+I (246) cpu_start: App version:      1
+I (250) cpu_start: Compile time:     Jun 13 2021 09:12:24
+I (256) cpu_start: ELF file SHA256:  f038cc473b13a4cf...
+I (262) cpu_start: ESP-IDF:          v4.4-dev-1594-g1d7068e4b-dirty
+I (269) heap_init: Initializing. RAM available for dynamic allocation:
+I (276) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (282) heap_init: At 3FFB3370 len 0002CC90 (179 KiB): DRAM
+I (289) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (295) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (302) heap_init: At 4008B3E4 len 00014C1C (83 KiB): IRAM
+I (309) spi_flash: detected chip: generic
+I (312) spi_flash: flash io: dio
+W (316) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (332) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+þlMan tCreated = 33293.
+kMan tCreated = 33620.
+tMan tCreated = 33714.
+pcMan tCreated = 33813.
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+idlingMicros per 64 iters = 3834.176
+ave cycling = 2806.04 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 95 & numExtremaInterrupts = 6 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.32
+ave cycling = 2816.06 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 102 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.38
+idlingMicros per 64 iters = 3907.520
+ave cycling = 2810.23 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.19
+idlingMicros per 64 iters = 3952.960
+ave cycling = 2812.33 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.15
+ave cycling = 2810.14 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 90 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.20
+idlingMicros per 64 iters = 3958.400
+ave cycling = 2809.04 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.09
+ave cycling = 2819.54 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 90 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3981.504
+TimingManager::ave iter = 61.04
+ave cycling = 2818.40 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 4031.680
+TimingManager::ave iter = 61.38
+ave cycling = 2815.16 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 89 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.09
+ave cycling = 2819.09 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 90 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3919.296
+TimingManager::ave iter = 61.24
+ave cycling = 2816.39 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3953.088
+TimingManager::ave iter = 61.14
+ave cycling = 2810.45 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+ave cycling = 2814.63 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.14
+idlingMicros per 64 iters = 3858.048
+ave cycling = 2820.96 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.26
+idlingMicros per 64 iters = 3908.224
+ave cycling = 2813.17 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.43
+ave cycling = 2808.94 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.19
+idlingMicros per 64 iters = 3938.624
+ave cycling = 2813.77 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.26
+ave cycling = 2807.37 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3952.704
+TimingManager::ave iter = 61.17
+ave cycling = 2814.60 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 91 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.21
+idlingMicros per 64 iters = 3958.144
+ave cycling = 2812.47 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 95 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.17
+ave cycling = 2813.03 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 95 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3946.560
+TimingManager::ave iter = 61.27
+ave cycling = 2814.55 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 4044.544
+TimingManager::ave iter = 61.23
+ave cycling = 2815.24 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.24
+ave cycling = 2817.54 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 4000.576
+ave cycling = 2818.74 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 95 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.13
+idlingMicros per 64 iters = 3791.680
+ave cycling = 2807.79 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 94 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.13
+ave cycling = 2813.53 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 93 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.16
+idlingMicros per 64 iters = 3978.624
+ave cycling = 2813.15 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 99 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.24
+idlingMicros per 64 iters = 3952.000
+ave cycling = 2810.59 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 94 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.21
+ave cycling = 2810.67 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 94 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.19
+idlingMicros per 64 iters = 3905.472
+ave cycling = 2818.97 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 95 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.15
+ave cycling = 2813.30 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3848.064
+TimingManager::ave iter = 61.06
+ave cycling = 2829.15 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 4086.528
+TimingManager::ave iter = 61.19
+ave cycling = 2819.59 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 90 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.22
+ave cycling = 2823.16 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 91 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 4003.392
+TimingManager::ave iter = 61.13
+ave cycling = 2817.32 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 3888.064
+TimingManager::ave iter = 61.12
+ave cycling = 2819.01 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+ave cycling = 2819.16 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 92 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.09
+idlingMicros per 64 iters = 4087.360
+ave cycling = 2819.51 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 95 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.29
+idlingMicros per 64 iters = 3936.960
+ave cycling = 2823.15 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 91 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.08
+ave cycling = 2823.22 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 91 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 61.35
+Executing action: monitor
+Running idf_monitor in directory /home/hazyjz/eclipse-workspace/AMSAE_BASE
+Executing "/home/hazyjz/.espressif/python_env/idf4.4_py3.8_env/bin/python /home/hazyjz/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 --print_filter  /home/hazyjz/eclipse-workspace/AMSAE_BASE/build/app-template.elf -m '/home/hazyjz/.espressif/python_env/idf4.4_py3.8_env/bin/python' '/home/hazyjz/esp/esp-idf/tools/idf.py'"...
+--- idf_monitor on /dev/ttyUSB0 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+øøøxøøøxøxxxxxxxxxøxøøxxxxxøøxxxxøøxxxøøxøøxxxøøøøøøøxxxøxøøxøxøxxxøøxøxxøxøxxøøøxxøxøøøøøxøøøxøxxøøxxxøxøøxøxøxxxxxøxøøxxøxøøxøxøxøøøøxxxxxøxøøøøxxøxøøøøøxøøøxøxxøøxxxøxøøxøxøxxxøxøxøxxxxxxøxxxøøxxøxøxøxxxxxxxxxxøøøøxxøxøøøøøxøøøxøxxxxøxxxxøøxxøxøxxøøxxxøxxøøøøxxøxøøøøøxøøøxøxxxets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6748
+ho 0 tail 12 room 4
+load:0x40078000,len:14236
+load:0x40080400,len:3716
+0x40080400: _init at ??:?
+
+entry 0x40080680
+I (29) boot: ESP-IDF v4.4-dev-1594-g1d7068e4b-dirty 2nd stage bootloader
+I (29) boot: compile time 09:11:51
+I (30) boot: chip revision: 1
+I (34) boot_comm: chip revision: 1, min. bootloader chip revision: 0
+I (41) boot.esp32: SPI Speed      : 40MHz
+I (45) boot.esp32: SPI Mode       : DIO
+I (50) boot.esp32: SPI Flash Size : 2MB
+I (54) boot: Enabling RNG early entropy source...
+I (60) boot: Partition Table:
+I (63) boot: ## Label            Usage          Type ST Offset   Length
+I (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (86) boot:  2 factory          factory app      00 00 00010000 00100000
+I (93) boot: End of partition table
+I (97) boot_comm: chip revision: 1, min. application chip revision: 0
+I (104) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09a10h ( 39440) map
+I (127) esp_image: segment 1: paddr=00019a38 vaddr=3ffb0000 size=024e0h (  9440) load
+I (131) esp_image: segment 2: paddr=0001bf20 vaddr=40080000 size=040f8h ( 16632) load
+I (140) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=20100h (131328) map
+I (189) esp_image: segment 4: paddr=00040128 vaddr=400840f8 size=072ech ( 29420) load
+I (201) esp_image: segment 5: paddr=0004741c vaddr=50000000 size=00010h (    16) load
+I (207) boot: Loaded app from partition at offset 0x10000
+I (207) boot: Disabling RNG early entropy source...
+I (221) cpu_start: Pro cpu up.
+I (222) cpu_start: Starting app cpu, entry point is 0x40081058
+0x40081058: call_start_cpu1 at /home/hazyjz/esp/esp-idf/components/esp_system/port/cpu_start.c:150
+
+I (0) cpu_start: App cpu up.
+I (236) cpu_start: Pro cpu start user code
+I (236) cpu_start: cpu freq: 160000000
+I (236) cpu_start: Application information:
+I (240) cpu_start: Project name:     app-template
+I (246) cpu_start: App version:      1
+I (250) cpu_start: Compile time:     Jun 13 2021 09:12:24
+I (256) cpu_start: ELF file SHA256:  26f0409d0c1bd377...
+I (262) cpu_start: ESP-IDF:          v4.4-dev-1594-g1d7068e4b-dirty
+I (269) heap_init: Initializing. RAM available for dynamic allocation:
+I (276) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (282) heap_init: At 3FFB3378 len 0002CC88 (179 KiB): DRAM
+I (289) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (295) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (301) heap_init: At 4008B3E4 len 00014C1C (83 KiB): IRAM
+I (309) spi_flash: detected chip: generic
+I (312) spi_flash: flash io: dio
+W (316) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+I (332) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+þlMan tCreated = 33281.
+kMan tCreated = 33603.
+tMan tCreated = 33698.
+pcMan tCreated = 33797.
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+INITIALIZING::KPTHISTORY_DATA_NOT_SET
+ave cycling = 2862.91 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 83 & numExtremaInterrupts = 6 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 320.552
+TimingManager::ave iter = 81.06
+ave cycling = 2867.85 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 77 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 80.91
+ave cycling = 2863.35 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 85 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 324.300
+ave cycling = 2866.39 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 84 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 80.97
+ave cycling = 2866.56 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 80 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 327.740
+TimingManager::ave iter = 81.15
+ave cycling = 2866.13 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 85 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+ave cycling = 2867.92 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 80 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 80.91
+idlingMicros per 64 iters = 322.676
+ave cycling = 2864.79 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 86 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 80.97
+ave cycling = 2871.21 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 83 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 336.608
+TimingManager::ave iter = 80.85
+ave cycling = 2864.40 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 84 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+ave cycling = 2868.17 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 83 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 315.668
+TimingManager::ave iter = 81.18
+ave cycling = 2865.40 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 87 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+TimingManager::ave iter = 80.81
+ave cycling = 2869.33 & numStaccatoInterrupts = 0 & numSurgeInterrupts = 79 & numExtremaInterrupts = 0 & numResumeInterrupts = 0
+idlingMicros per 64 iters = 333.040
+
