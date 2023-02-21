@@ -1,4 +1,4 @@
-# ![Everphase Logo](smallestlogo.png)<a href="https://github.com/jahearnco/AMSAE/tree/main/main">AMSAE</a>
+# ![Everphase Logo](smallestlogo.png) &nbsp; <a href="https://github.com/jahearnco/AMSAE/tree/main/main">AMSAE</a>
 
 Active Magnetic Shock Absorber Engine 
 
