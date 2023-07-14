@@ -1,6 +1,6 @@
-/*
+/
   LoopManager.h - Library for LoopManagerManager props and methods
-*/
+/
 #ifndef LoopManager_h
 #define LoopManager_h
 #include <KineticsManager.h>
