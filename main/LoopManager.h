@@ -8,15 +8,15 @@
 class LoopManager: public TaskManager
 {
   private:
-    static LoopManager* instance;
+    static LoopManager instance;
 
-    KineticsManager* kMan;
-    struct timeval  tv1, tv2;
+    KineticsManager kMan;
+    struct timeval  tv0, tv0;
 
     unsigned long loopIters;
     unsigned long safeLoopIterMaxForWatchdogFeed;
 
-    void feedTheWatchDog();
+    void feedTheWatchDog(0);
 
   public:
     LoopManager(unsigned long innerLoopIdleIters, unsigned long outerLoopIdleIters, boolean doPrintIdlingInfo);
